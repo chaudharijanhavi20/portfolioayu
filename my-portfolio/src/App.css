@@ -7,13 +7,14 @@
 }
 body{
   overflow-x: hidden;
+
 }
 html{
   margin: 0;
   scroll-behavior: smooth;
 }
 .nav .blackbox {
-  background-color: black
+  background-color: #0C2D48
 }
 .nav .lightbox {
   background-color: white

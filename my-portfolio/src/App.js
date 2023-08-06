@@ -1,24 +1,20 @@
 import './App.css';
-import Committe from './committe';
-import Footer from './component/footer/footer';
-import Navbar from './component/navbar/navbar';
-import Contactme from './Contactme';
-import Intro from './Intro';
-import Recentproject from './recentproject';
-import Service from './service';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollReveal from 'scrollreveal';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
 function App() {
   ScrollReveal().reveal('#app');
   return (
-    <div className="App" id='app'>
-      <Navbar />
-      <Intro />
-      <Service />
-      <Recentproject />
-      <Committe />
-      <Contactme />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+          <Route index element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          {/* <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NoPage />} /> */}
+      </Routes>
+    </BrowserRouter>
   );
 }
 
