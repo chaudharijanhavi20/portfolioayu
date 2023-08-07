@@ -76,16 +76,21 @@
     rgba(44, 187, 99, 0.25) 0 16px 32px;
   transform: scale(1.05) rotate(-1deg);
 }
-@media (max-width: 62em) {
+@media (max-width: 600px) {
   .myintro {
     width: 100%;
+    padding: 35px 0 0px 30px;
+    height: 28rem;
+  }
+  .myintro h1{
+    font-size: 50px;
   }
   .myname {
     margin-top: 0;
     text-align: center;
   }
   .intro {
-    height: 100vh;
+    height: 10vh;
     margin-bottom: 25rem;
   }
   .myskills {
@@ -99,6 +104,7 @@
     height: 400px;
     grid-template-columns: 60px;
     grid-template-rows: 60px;
+
   }
   .item {
     grid-area: 1/1;
@@ -131,15 +137,16 @@
   min-height: 40vh;
   width: 45%;
   padding: 50px 40px;
-  margin-top: 7px;
+  margin-top: 7px; /*ye*/
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-y: hidden;
 }
 
 .home-container .logo {
-  position: inherit;
+  /* position: inherit; */
   /* margin-top: -50px; */
   height: 520px;
   width: 520px;
@@ -152,8 +159,8 @@
 
 .home-container .logo .hover-show {
   position: absolute;
-  height: 300px;
-  width: 300px;
+  height: 200px;
+  width: 200px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -252,12 +259,14 @@
   width: 300px;
   border-radius: 50%;
   border: 3px solid rgb(108, 161, 197);
-  transform: translate(-200px);
+  /* transform: translate(-200px); */
   opacity: 0;
   animation: fade-in 1s ease 1 0.5s forwards;
-  transform: translate(0);
+  /* transform: translate(0); */
 }
-
+::-webkit-scrollbar {
+  display: none;
+}
 @keyframes fade-in {
   to {
 
@@ -286,7 +295,8 @@
     position: relative;
     min-height: 50vh;
     /* padding: 150px 40px; */
-    margin-top: 20px;
+    /* margin-top: 20px; */
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -345,20 +355,21 @@
 @media (max-width: 500px) {
   .home-container {
     position: relative;
-    min-height: 100vh;
+    min-height: 10vh;
+    margin: 0;
     /* padding: 150px 30px; */
-    /* margin-top: 20px; */
+    /* margin-top: 50px !important; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
   .home-container .logo {
     position: inherit;
-    height: 220px;
-    width: 220px;
+    height: 200px;
+    width: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -419,7 +430,8 @@
   .home-container {
     position: relative;
     /* min-height: 30vh; */
-    margin-top: -150px;
+    /* margin-top: -150px; */
+    height: 15rem;
     width: 100%;
     /* padding: 150px 10px 0; */
     /* margin-top: 20px; */
@@ -472,7 +484,7 @@
     width: 80%;
     border-radius: 50%;
     border: 3px solid rgb(108, 161, 197);
-    transform: translate(-200px);
+    /* transform: translate(-200px); */
     opacity: 0;
     animation: fade-in 1s ease 1 0.5s forwards;
   }

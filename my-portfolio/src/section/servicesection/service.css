@@ -1,76 +1,118 @@
-.service{
-    display: flex;
-    height: 100vh;
-    flex-wrap: wrap;
+.service {
+  display: flex;
+  height: 100vh;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.myservice{
-    width: 40%;
-    display: flex;
-    flex-direction: column;
+.service h1{
+    color: #A2FF86;
+    font-size: 40px;
+}
+.maingrid {
+  display: grid;
+  height: 400px;
+  width: 60%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "boxes1 boxes1 boxes1"
+    "boxes2 boxes3 boxes5"
+    "boxes2 boxes4 boxes6";
+  grid-gap: 2rem;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  font-size: larger;
+  color: aliceblue;
+  font-weight: bolder;
+}
+#boxes1 {
+  grid-area: boxes1;
+  background-color: #176b87;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.box img {
+  width: 80px;
+  height: 80px;
+}
+#boxes2 {
+  grid-area: boxes2;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: #176b87;
+}
+#boxes3 {
+  grid-area: boxes3;
+  background-color: #176b87;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.boxes4 {
+  grid-area: boxes4;
+  background-color: #176b87;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.boxes5 {
+  grid-area: boxes5;
+  background-color: #176b87;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.boxes6 {
+  grid-area: boxes6;
+  background-color: #176b87;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 550px) {
+
+  .maingrid {
+    width: 100%;
+    height: 40rem;
+    grid-template-columns: 90%;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.servicecards{
-    width: 60%;
-    position: relative;
-
-}
-.call a{
-    text-decoration: none;
-    color: black;
-}
-.servicecards>div>*{
-    position: absolute;
-}
-.servicecards div:nth-child(1) div{
-        top: 2%;
-    left: 50%;
-
-}
-.servicecards div:nth-child(2) div{
-        top: 25%;
-    left: 0%;
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr)) !important;
+    grid-template-areas:
+      "boxes1"
+      "boxes2"
+      "boxes3"
+      "boxes4"
+      "boxes5"
+      "boxes6";
+  }
+  .box{
+    padding: 1rem;
+  }
+  .box img {
+    width: 75px;
+    height: 75px;
+  }
 }
 
-.servicecards div:nth-child(3) div{
-        top: 50%;
-    left: 50%;
+@media (max-width: 62em) {
+  .service {
+    width: 100%;
+    /* margin-top: 10rem; */
+    height: 90rem;
+  }
 }
-
-.recent{
-    height: 5vh;
-}
-@media (max-width:62em) {
-    .service{
-        width: 100%;
-        /* margin-top: 10rem; */
-        height: 90rem;
-    }
-    .myservice{
-        width: 100%;
-        margin-top: 10rem;
-    }
-    .myservice h3{
-        text-align: center;
-    }
-    .servicecards{
-        width: 100%;
-        margin: auto;
-    }
-    .servicecards>div>*{
-        position: static;
-        width: 95%;
-    }
-    .cardsdesign{
-        width: 100%;
-    }
-    .button-33 a{
-        text-decoration: none;
-        color: white;
-    }
-}
-.button-33 a{
-    text-decoration: none;
-    color: white;
+.button-33 a {
+  text-decoration: none;
+  color: white;
 }
