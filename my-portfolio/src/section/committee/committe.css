@@ -3,9 +3,15 @@
     text-align: center;
 
 }
+.committe h1{
+    color: #A2FF86;
+    font-size: 40px;
+}
 .cardset{
     width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 
 }

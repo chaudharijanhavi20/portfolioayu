@@ -21,21 +21,11 @@ margin: auto;
 }
 .projectcards{
     border-radius: 58px;
-background: white;
-box-shadow:  5px 5px 10px #d3d3d3,
-             -5px -5px 10px #ededed;
+
 }
 
-.blackish .projectcards{
-    background-color: black;
-    box-shadow:  5px 5px 12px #d94738,
-    -5px -5px 12px #f55140;
-    color: whitesmoke;
-}
-.blackish .projectcards a{
-    color: white;
-}
+
 .projectcards:hover{
-    scale: 0.9;
+    scale: 1.1;
     transition: all 0.5s ease-in;
 }

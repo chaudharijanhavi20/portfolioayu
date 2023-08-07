@@ -16,7 +16,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    line-height: 1;
     width: 50%;
+
 }
 .contright form input[type=text]{
     /* background-color: antiquewhite; */
@@ -24,8 +26,9 @@
     height: 2rem;
     border-radius: 1rem;
     margin: 2rem 0rem;
-    border: 3px solid red;
+    border: 3px solid #35A29F;
     padding: 1rem;
+    
 
 }
 .contright form input[type=text]::placeholder{

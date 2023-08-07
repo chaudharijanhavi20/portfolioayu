@@ -25,7 +25,7 @@ export default function Recentproject() {
   return (
     <motion.div className='recent' style={{height:'60%'}} 
 >
-        <h1 style={{textAlign:'center'}}>My recent projects</h1>
+        <h1 style={{textAlign:'center',color: "#A2FF86",fontSize: '40px'}}>My recent projects</h1>
         <Swiper
       spaceBetween={20}
       slidesPerView={4}

@@ -1,16 +1,21 @@
 .Commiteecards{
-    border-radius: 50px;
-background: white;
-box-shadow:  20px 20px 60px #d0d0d0,
-             -20px -20px 60px #f0f0f0;
+    border-radius: 15px;
+    background-color: #176b87;
              display: flex;
-             width: 28%;
+             width: 400px;
              margin: 2rem;
+             justify-content: center;
+             align-items: center;
              flex-wrap: wrap;
+             
+}
+.Commiteecards h2{
+    color: #A2FF86;
 }
 .Commiteecards img{
     width: 10rem;
     height: 10rem;
+    border-radius: 15px 0 0 15px;
 }
 .Commiteecards .right{
     display: flex;
@@ -26,6 +31,8 @@ box-shadow:  20px 20px 60px #d0d0d0,
     .Commiteecards img{
         width: 6rem;
         height: 6rem;
+        border-radius: 1rem;
+        margin-left: 2rem;
     }
     .blackish .Commiteecards{
         width: 100% !important;

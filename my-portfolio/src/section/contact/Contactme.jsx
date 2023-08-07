@@ -25,7 +25,7 @@ export default function Contactme() {
     <div className='contactme' id='contact'>
         <div className='contleft'>
             <h1>GET IN TOUCH</h1>
-            <h1 style={{color:'red'}}>Contact Me</h1>
+            <h1 style={{color:'#35A29F'}}>Contact Me</h1>
         </div>
         <div className='contright' data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
