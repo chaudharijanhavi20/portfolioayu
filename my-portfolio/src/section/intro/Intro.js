@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './intro.css'
-import ayush from './images/ayush.png'
+import ayush from '../../images/ayush.png'
 import CallIcon from '@mui/icons-material/Call';
 import Typed from 'react-typed';
 

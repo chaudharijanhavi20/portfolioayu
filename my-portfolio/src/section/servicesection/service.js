@@ -1,11 +1,11 @@
 import React from 'react'
 import './service.css'
-import resume from './ayushresume.pdf'
+import resume from '../../ayushresume.pdf'
 import DownloadIcon from '@mui/icons-material/Download';
-import Cards from './component/cards/cards';
-import python from './images/pythondev.jfif'
-import frontend from './images/frontend.png'
-import backend from './images/backend.jfif'
+import Cards from '../../component/cards/cards';
+import python from '../../images/pythondev.jfif'
+import frontend from '../../images/frontend.png'
+import backend from '../../images/backend.jfif'
 // import { AnimatePresence, motion } from 'framer-motion'
 // import { useState } from "react";
 

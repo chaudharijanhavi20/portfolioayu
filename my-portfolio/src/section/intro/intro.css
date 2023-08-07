@@ -30,56 +30,6 @@
     height: 100%;
     margin-top: 5rem;
 }
-
-#container {
-    --n:8;   /* number of item */
-  --d:12s; /* duration */
-    width: 400px;
-    height: 400px;
-    margin: 10px auto;
-    border: 1px solid #e74c3c; /* some kind of blue border */
-
-    /* other CSS styles */
-
-    /* round the corners */
-    -webkit-border-radius: 5px;
-       -moz-border-radius: 5px;
-            border-radius: 5px;
-
-
-    /* make it glow! */
-    -webkit-box-shadow: 0px 0px 15px #e74c3c;
-       -moz-box-shadow: 0px 0px 15px #e74c3c;
-            box-shadow: 0px 0px 15px #e74c3c;
-    display:grid;
-    grid-template-columns:60px;
-    grid-template-rows:60px;
-    place-content: center;
-    border-radius: 50%;
-  }
-  .item {
-    grid-area:1/1;
-    line-height: 60px;
-    text-align: center;
-    border-radius: 50%;
-    /* background: #f00; */
-    animation: spin 16s var(--d,0s) linear infinite; /* duration = 12s, numbor of item = 6 so a delay of 12/6 = 2s */
-    transform:rotate(0) translate(200px) rotate(0);
-  }
-  .item img{
-    width: 6rem;
-    height: 6rem;
-  }
-  @keyframes spin {
-    100% {
-      transform:rotate(1turn) translate(200px) rotate(-1turn);
-    }
-  }
-
-@keyframes rotate{
-    to{ transform: rotate(360deg); }
-  }
-
 .myintro{
     display: flex;
     flex-direction: column;
@@ -220,7 +170,7 @@
   }
   
   .home-container .logo .hover-show.active .circle:nth-child(1) {
-    background: url(./images/tailwind.png);
+    background: url(../../images/tailwind.png);
     background-size: cover;
     background-position: center;
     position: absolute;
@@ -229,49 +179,49 @@
   .home-container .logo .hover-show.active .circle:nth-child(2) {
     position: absolute;
     transform: translateX(150%) translateY(-150%);
-    background: url(./images/django.png);
+    background: url(../../images/django.png);
     background-size: cover;
     background-position: center;
   }
   .home-container .logo .hover-show.active .circle:nth-child(3) {
     position: absolute;
     transform: translateX(210%);
-    background: url(./images/php.png);
+    background: url(../../images/php.png);
     background-size: cover;
     background-position: center;
   }
   .home-container .logo .hover-show.active .circle:nth-child(4) {
     position: absolute;
     transform: translateX(150%) translateY(150%);
-    background: url(./images/js.png);
+    background: url(../../images/js.png);
     background-size: cover;
     background-position: center;
   }
   .home-container .logo .hover-show.active .circle:nth-child(5) {
     position: absolute;
     transform: translateY(210%);
-    background: url(./images/react.png);
+    background: url(../../images/react.png);
     background-size: cover;
     background-position: center;
   }
   .home-container .logo .hover-show.active .circle:nth-child(6) {
     position: absolute;
     transform: translateX(-150%) translateY(150%);
-    background: url(./images/python.png);
+    background: url(../../images/python.png);
     background-size: cover;
     background-position: center;
   }
   .home-container .logo .hover-show.active .circle:nth-child(7) {
     position: absolute;
     transform: translateX(-210%);
-    background: url(./images/c.png);
+    background: url(../../images/c.png);
     background-size: cover;
     background-position: center;
   }
   .home-container .logo .hover-show.active .circle:nth-child(8) {
     position: absolute;
     transform: translateX(-150%) translateY(-150%);
-    background: url(./images/mern.png);
+    background: url(../../images/mern.png);
     background-size: cover;
     background-position: center;
   }

@@ -1,10 +1,10 @@
 import React from 'react'
 import './committe.css'
-import Commiteecards from './component/commiteecards/commiteecards'
-import csi from './images/csi.png'
-import gdsc from './images/gdsc.jpeg'
-import alumni from './images/alumni.jpg'
-import swapnil from './images/swapnillogo.png'
+import Commiteecards from '../../component/commiteecards/commiteecards'
+import csi from '../../images/csi.png'
+import gdsc from '../../images/gdsc.jpeg'
+import alumni from '../../images/alumni.jpg'
+import swapnil from '../../images/swapnillogo.png'
 
 export default function Committe(props) {
   return (
