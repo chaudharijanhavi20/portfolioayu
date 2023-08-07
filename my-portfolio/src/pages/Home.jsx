@@ -12,8 +12,8 @@ import Themecontext from "../context/Themecontext";
 const themereducerfunction = (state, action) => {
   if (action.type === "changetheme") {
     if(state==="lightbox"){
-      document.querySelector("body").style.backgroundColor="black"
-      document.querySelector("body").style.color="white"
+      document.querySelector("body").style.backgroundColor="#001C30"
+      document.querySelector("body").style.color="#35A29F"
       return "blackbox"
     }
     else{

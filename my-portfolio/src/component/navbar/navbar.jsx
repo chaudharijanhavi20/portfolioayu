@@ -6,10 +6,29 @@ import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import { useContext } from "react";
 import Themecontext from "../../context/Themecontext";
 import { motion } from "framer-motion";
+const headervariant = {
+  hidden: {
+    y: -100,
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.5, staggerChildren: 0.5 },
+  },
+};
+const inneritem = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: { duration: 0.3, staggerChildren: 0.2 },
+  },
+};
 const Navbar = () => {
   const togglenavbar = () => {
     const nav_header = document.querySelector(".nav");
-    console.log(nav_header);
     nav_header.classList.toggle("active");
   };
   const Themechange = useContext(Themecontext);
@@ -17,20 +36,20 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className="nav">
-        <div className="left">
-          <motion.div
-          initial={{y:-100,
-          opacity:0}}
-          animate={{y:0,
-          opacity:1}}
-          transition={{duration:1,delay:0.2}}
-          className="heading">
-            <h1>Ayush Shukla</h1>
+      <motion.div
+        className="nav"
+        variants={headervariant}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.div className="left" variants={inneritem}>
+          <motion.div className="heading" variants={headervariant}>
+            <h1>Ayush</h1>
           </motion.div>
-          <div
+          <motion.div
             className={`toggle`}
             onClick={() => Themechange.dispatch({ type: "changetheme" })}
+            variants={headervariant}
           >
             <div className="dark">
               <DarkModeIcon />
@@ -38,43 +57,43 @@ const Navbar = () => {
             <div className="light">
               <WbSunnyIcon />
             </div>
-          </div>
-        </div>
-        <div className="right">
+          </motion.div>
+        </motion.div>
+        <motion.div className="right" variants={inneritem}>
           <ul className={`${Themechange.value}`}>
-            <li onClick={togglenavbar}>
+            <motion.li onClick={togglenavbar} variants={headervariant}>
               <a className="nav-link" href="#home">
                 Home
               </a>{" "}
-            </li>
-            <li onClick={togglenavbar}>
+            </motion.li>
+            <motion.li onClick={togglenavbar} variants={headervariant}>
               <a className="nav-link" href="#service">
                 Service
               </a>{" "}
-            </li>
-            <li onClick={togglenavbar}>
+            </motion.li>
+            <motion.li onClick={togglenavbar} variants={headervariant}>
               <a className="nav-link" href="#committe">
                 Experience
               </a>{" "}
-            </li>
-            <li onClick={togglenavbar}>
+            </motion.li>
+            <motion.li onClick={togglenavbar} variants={headervariant}>
               <a className="nav-link" href="https://github.com/ayusshh19">
                 Portfolio
               </a>{" "}
-            </li>
-            <li onClick={togglenavbar}>
+            </motion.li>
+            <motion.li onClick={togglenavbar} variants={headervariant}>
               <a className="nav-link" href="#contact">
                 {" "}
                 Contact us
               </a>
-            </li>
+            </motion.li>
           </ul>
           <div className="mobile-navbar-btn" onClick={togglenavbar}>
             <MenuIcon name="menu-outline" className="mobile-nav-icon" />
             <CloseIcon name="close-outline" className="mobile-nav-icon" />
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </nav>
   );
 };
