@@ -60,6 +60,9 @@ ul{
     font-size: large;
     font-weight: 400;
 }
+.lightbox .nav-link{
+    color: black;
+}
 @media (max-width:62em) {
     .mobile-navbar-btn{
         display: block;

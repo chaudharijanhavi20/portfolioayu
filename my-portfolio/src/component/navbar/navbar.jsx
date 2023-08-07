@@ -1,50 +1,37 @@
 import "./navbar.css";
-import CloseIcon from '@mui/icons-material/Close';
-import MenuIcon from '@mui/icons-material/Menu';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
-import WbSunnyIcon from '@mui/icons-material/WbSunny';
+import CloseIcon from "@mui/icons-material/Close";
+import MenuIcon from "@mui/icons-material/Menu";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+import WbSunnyIcon from "@mui/icons-material/WbSunny";
+import { useContext } from "react";
+import Themecontext from "../../context/Themecontext";
+import { motion } from "framer-motion";
 const Navbar = () => {
-  const togglebutton=()=>{
-    const toggle=document.querySelector('.toggle')
-    if (toggle.classList.contains('blackbox')) {
-      toggle.classList.toggle('blackbox')
-      toggle.classList.add('lightbox')
-      document.querySelector('body').style.backgroundColor='white'
-      document.querySelector('body').style.color='black'
-      document.querySelector('body').classList.toggle('blackish')
-      document.querySelector('body').classList.toggle('lightish')
-      for (const item of document.querySelectorAll('.nav-link')) {
-        item.style.color='black'
-      }
-      
+  const togglenavbar = () => {
+    const nav_header = document.querySelector(".nav");
+    console.log(nav_header);
+    nav_header.classList.toggle("active");
+  };
+  const Themechange = useContext(Themecontext);
+  console.log(Themechange.value);
 
-    }
-    else{
-      toggle.classList.add('blackbox')
-      toggle.classList.toggle('lightbox')
-      document.querySelector('body').style.backgroundColor='black'
-      document.querySelector('body').style.color='white'
-      document.querySelector('body').classList.toggle('lightish')
-      document.querySelector('body').classList.toggle('blackish')
-      for (const item of document.querySelectorAll('.nav-link')) {
-        item.style.color='white'
-      }
-      
-    }
-  }
-  const togglenavbar=()=>{
-  const nav_header=document.querySelector('.nav')
-  console.log(nav_header)
-    nav_header.classList.toggle('active')
-  }
   return (
     <nav>
       <div className="nav">
         <div className="left">
-          <div className="heading">
-            <h1>Ayush</h1>
-          </div>
-          <div className="toggle lightbox" onClick={()=>togglebutton()}>
+          <motion.div
+          initial={{y:-100,
+          opacity:0}}
+          animate={{y:0,
+          opacity:1}}
+          transition={{duration:1,delay:0.2}}
+          className="heading">
+            <h1>Ayush Shukla</h1>
+          </motion.div>
+          <div
+            className={`toggle`}
+            onClick={() => Themechange.dispatch({ type: "changetheme" })}
+          >
             <div className="dark">
               <DarkModeIcon />
             </div>
@@ -54,16 +41,37 @@ const Navbar = () => {
           </div>
         </div>
         <div className="right">
-          <ul>
-            <li onClick={togglenavbar}><a className="nav-link" href="#home">HOME</a> </li>
-            <li onClick={togglenavbar}><a className="nav-link" href="#service">Service</a> </li>
-            <li onClick={togglenavbar}><a className="nav-link" href="#committe">Experience</a> </li>
-            <li onClick={togglenavbar}><a className="nav-link" href="https://github.com/ayusshh19">Portfolio</a> </li>
-            <li onClick={togglenavbar}><a className="nav-link" href="#contact"> Contact us</a></li>
+          <ul className={`${Themechange.value}`}>
+            <li onClick={togglenavbar}>
+              <a className="nav-link" href="#home">
+                Home
+              </a>{" "}
+            </li>
+            <li onClick={togglenavbar}>
+              <a className="nav-link" href="#service">
+                Service
+              </a>{" "}
+            </li>
+            <li onClick={togglenavbar}>
+              <a className="nav-link" href="#committe">
+                Experience
+              </a>{" "}
+            </li>
+            <li onClick={togglenavbar}>
+              <a className="nav-link" href="https://github.com/ayusshh19">
+                Portfolio
+              </a>{" "}
+            </li>
+            <li onClick={togglenavbar}>
+              <a className="nav-link" href="#contact">
+                {" "}
+                Contact us
+              </a>
+            </li>
           </ul>
           <div className="mobile-navbar-btn" onClick={togglenavbar}>
-            <MenuIcon  name="menu-outline" className="mobile-nav-icon"/>
-            <CloseIcon name="close-outline" className="mobile-nav-icon"/>
+            <MenuIcon name="menu-outline" className="mobile-nav-icon" />
+            <CloseIcon name="close-outline" className="mobile-nav-icon" />
           </div>
         </div>
       </div>
